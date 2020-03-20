@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="cat.udl.tidic.amd.dam_rock_paper_scissors_lizard_spock.models.Options"/>
+        <variable
+            name="gameViewModel"
+            type="cat.udl.tidic.amd.dam_rock_paper_scissors_lizard_spock.viewmodels.GameViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GameActivity">
+
+        <Button
+            android:id="@+id/ROCK"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> gameViewModel.onClickedAt(Options.ROCK)}"
+            android:text="@string/rock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/SCISSOR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> gameViewModel.onClickedAt(Options.SCISSORS)}"
+            android:text="@string/scissor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ROCK"
+            />
+
+        <Button
+            android:id="@+id/PAPER"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:onClick="@{() -> gameViewModel.onClickedAt(Options.PAPER)}"
+            android:text="@string/paper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SCISSOR" />
+
+        <Button
+            android:id="@+id/LIZARD"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:onClick="@{() -> gameViewModel.onClickedAt(Options.LIZARD)}"
+            android:text="@string/lizard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PAPER" />
+
+        <Button
+            android:id="@+id/SPOCK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{() -> gameViewModel.onClickedAt(Options.SPOCK)}"
+            android:text="@string/spock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LIZARD" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="575dp"
+            android:layout_height="303dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/game" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DAM-rock-paper-scissors-lizard-spock</string>
+    <string name="courselogo">course-logo</string>
+    <string name="start_game">Start Game</string>
+    <string name="game_dialog_title">New Game</string>
+    <string name="start">start</string>
+    <string name="game_dialog_empty_name">Name mustn\'t be empty</string>
+    <string name="game_dialog_same_names">Names mustn\'t be the same</string>
+    <string name="game_end_dialog_headline">The winner is</string>
+    <string name="player_hint">Player name</string>
+    <string name="spock">SPOCK</string>
+    <string name="lizard">LIZARD</string>
+    <string name="paper">PAPER</string>
+    <string name="scissor">SCISSOR</string>
+    <string name="rock">ROCK</string>
+    <string name="done">done</string>
+    <string name="defeat">DEFEAT</string>
+    <string name="again">PLAY AGAIN</string>
+    <string name="end">END</string>
+</resources>
